@@ -261,3 +261,12 @@ logstash:
   environment:
     LS_JAVA_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=18080 -Dcom.sun.management.jmxremote.rmi.port=18080 -Djava.rmi.server.hostname=DOCKER_HOST_IP -Dcom.sun.management.jmxremote.local.only=false"
 ```
+
+### Run custom host with environment variables
+
+export ELASTICSEARCH_IP=0.0.0.0:
+export LOGSTASH_IP=0.0.0.0:
+export KIBANA_IP=0.0.0.0:
+sudo mkdir /data/elasticsearch
+sudo chmod 777 -R /data/
+docker-compose up -d
