@@ -6,7 +6,7 @@ services:
     build:
       context: elasticsearch/
     volumes:
-      - /home/ubuntu/elasticsearch:/usr/share/elasticsearch/data
+      - /data/elasticsearch:/usr/share/elasticsearch/data
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
     ports:
       - "0.0.0.0:9200:9200"
